@@ -37,13 +37,13 @@ http.authorizeRequests()
 .antMatchers("/",
 		"/usuarios/indexpaginado",
 "/crear",
-"/guardar",
-"/vacantes/detalle/**").permitAll()
+"/guardar").permitAll()
 
 //Asignar permisos a URLs por ROLES
 .antMatchers("/vacantes/**").hasAnyAuthority("Supervisor","Administrador")
 .antMatchers("/categorias/**").hasAnyAuthority("Supervisor","Administrador")
 .antMatchers("/usuarios/**").hasAnyAuthority("Administrador")
+.antMatchers("/vacantes/detalle**").hasAnyAuthority("Usuario")
 // Todas las demás URLs de la Aplicación requieren autenticación
 .anyRequest().authenticated()
 // El formulario de Login no requiere autenticacion
