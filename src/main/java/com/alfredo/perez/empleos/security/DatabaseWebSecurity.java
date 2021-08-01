@@ -38,7 +38,7 @@ http.authorizeRequests()
 "/usuarios/indexpaginado",
 "/crear",
 "/guardar",
-"/vacantes/detalle/**").permitAll()
+"/vacantes/detalles/**").permitAll()
 
 //Asignar permisos a URLs por ROLES
 .antMatchers("/vacantes/**").hasAnyAuthority("Supervisor","Administrador")
