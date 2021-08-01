@@ -35,7 +35,6 @@ http.authorizeRequests()
 "/tinymce/**").permitAll()
 // Las vistas públicas no requieren autenticación  
 .antMatchers("/",
-"/usuarios/indexpaginado",
 "/crear",
 "/guardar",
 "/vacantes/detalles/**").permitAll()

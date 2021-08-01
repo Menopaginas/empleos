@@ -19,7 +19,7 @@
               
               <a class="nav-link" th:href="@{/vacantes/indexPaginado}">Vacantes</a>
             </li>   
-             <li class="nav-item" sec:authorize="hasAnyAuthority('Supervisor','Administrador')" >
+             <li class="nav-item" sec:authorize="hasAnyAuthority('Administrador')" >
               
               <a class="nav-link" th:href="@{/usuarios/indexPaginado}">Usuarios</a>
             </li> 
