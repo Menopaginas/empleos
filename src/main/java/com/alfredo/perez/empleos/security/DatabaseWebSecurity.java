@@ -32,8 +32,7 @@ http.authorizeRequests()
 .antMatchers(
 "/bootstrap/**",
 "/imagenes/**",
-"/tinymce/**",
-"/logos/**").permitAll()
+"/tinymce/**").permitAll()
 // Las vistas públicas no requieren autenticación  
 .antMatchers("/",
 		"/usuarios/indexpaginado",
