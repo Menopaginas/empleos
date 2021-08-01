@@ -35,9 +35,10 @@ http.authorizeRequests()
 "/tinymce/**").permitAll()
 // Las vistas públicas no requieren autenticación  
 .antMatchers("/",
-		"/usuarios/indexpaginado",
+"/usuarios/indexpaginado",
 "/crear",
-"/guardar").permitAll()
+"/guardar",
+"/vacantes/detalle/**").permitAll()
 
 //Asignar permisos a URLs por ROLES
 .antMatchers("/vacantes/**").hasAnyAuthority("Supervisor","Administrador")
